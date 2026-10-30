@@ -40,7 +40,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4.5em;
+    flex-wrap: wrap;
+    height: auto;
     padding: 0;
 }
 

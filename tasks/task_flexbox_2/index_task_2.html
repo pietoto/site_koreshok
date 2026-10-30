@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Вариант 4</title>
+        
+        <!-- общие стили -->
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/responsive.css">
+
+        <!-- стиль для анимации картинки -->
+         <link rel="stylesheet" href="style/flexbox.css">
+
+    </head>
+    <body>
+        <!-- верхняя полоска (тёмная) -->
+        <div class="topbar">
+            <div class="container topbar_inner">
+                <span class="topbar_text">Корешок</span>
+                <span class="topbar_meta">Дневник современного читателя</span>
+            </div>
+        </div>
+
+        <!-- верхняя полоска (шапка с меню) -->
+         <header class="header">
+            <div class="container header_inner">
+                <nav class="nav" aria-label="Основная навигация">
+                    <ul class="nav_list">
+                        <li><a href="../../index.html">Главная</a></li>
+                        <li><a href="../../index.html">Рецензии</a></li>
+                        <li><a href="../../index.html">Цитаты</a></li>
+                        <li><a href="../../index.html">Список книг</a></li>
+                        <li><a href="../../index.html">Обо мне</a></li>
+                        <li><a href="../tasks.html" class="is-active">Задания</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- синтаксис задания -->
+         <main class="container task_2-container">
+            <!-- для переключения состояний -->
+            <input type="checkbox" id="task4-click" class="task-click-input">
+            <label for="task4-click" class="image-wrapper">
+            <div class="image-wrapper">
+
+                <!-- статичное состояние -->
+                <div class="task-state task-static">
+                    <img src="var4/mask3.png" class="mask-static mask-dance-left">
+                    <img src="var4/mask2.png" class="mask-static rocket-dance-right">
+                </div>
+                <!-- при наведении -->
+                <div class="task-state task-hover">
+                    <img src="var4/mask5.png" class="mask-hover mask-center">
+                    <img src="var4/mask4.png" class="mask-hover rocket-fly">
+                    <p class="mask-caption">Как тебе такое?</p>
+                </div>
+                <!-- при нажатии -->
+                 <div class="task-state task-active">
+                    <img src="var4/finger3.png" class="finger-active finger-center">
+                    <img src="var4/finger2.png" class="finger-active finger-shake">
+                    <p class="active-caption">Меня не удивишь</p>
+                 </div>
+            </div>
+         </main>
+        
+    </body>
+</html>

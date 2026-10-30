@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Вариант 3</title>
+        
+        <!-- общие стили -->
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/responsive.css">
+        
+        <!-- подключение стиля для теста -->
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <!-- верхняя полоска (тёмная) -->
+        <div class="topbar">
+            <div class="container topbar_inner">
+                <span class="topbar_text">Корешок</span>
+                <span class="topbar_meta">Дневник современного читателя</span>
+            </div>
+        </div>
+
+        <!-- верхняя полоска (шапка с меню) -->
+         <header class="header">
+            <div class="container header_inner">
+                <nav class="nav" aria-label="Основная навигация">
+                    <ul class="nav_list">
+                        <li><a href="../../index.html">Главная</a></li>
+                        <li><a href="../../index.html">Рецензии</a></li>
+                        <li><a href="../../index.html">Цитаты</a></li>
+                        <li><a href="../../index.html">Список книг</a></li>
+                        <li><a href="../../index.html">Обо мне</a></li>
+                        <li><a href="../tasks.html" class="is-active">Задания</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!-- синтаксис задания -->
+        <main class="container" style="padding: 20px 0;">
+            <h2>Тест: Грамотность</h2>
+            <div id="status-container"></div>
+                       
+            <div id="quiz-container"></div>
+        </main>
+
+        <script src="script/script.js"></script>
+    </body>
+</html>

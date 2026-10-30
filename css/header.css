@@ -1,0 +1,114 @@
+/* тёмная полоска сверху */
+.topbar {
+    background: var(--topbar-bg);
+    color: #ffffff;
+}
+
+/* начинка тёмной полоски (корешок + дневник современного читателя) */
+.topbar_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2.5em;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    letter-spacing: .04em;
+}
+
+/* корешок */
+.topbar_text {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* дневник современного читателя */
+.topbar_meta {
+    color: rgba(255, 255, 255, .6);
+}
+
+/* светлая шапка */
+.header {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5em;
+    padding: 0;
+}
+
+/* меню */
+.nav_list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2.25em;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: 0.9375em;
+}
+
+/* ссылки в меню */
+.nav_list a {
+    white-space: nowrap;
+    color: var(--fg);
+    text-decoration: none;
+    padding: 0.375em 0.125em;
+    position: relative;
+    transition: color .2s ease;
+}
+
+/* линия подчёркивания при наведении */
+.nav_list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.125em;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+/* эффекты при наведении */
+.nav_list a:hover,
+.nav_list a:focus {
+    color: var(--accent);
+    outline: none;
+}
+.nav_list a:hover::after,
+.nav_list a:focus::after {
+    transform: scaleX(1);
+}
+
+/* подсветка активного пункта меню (того, на который нажали) */
+body:has(#reviews:target) .nav_list a[href="#reviews"],
+body:has(#quotes:target) .nav_list a[href="#quotes"],
+body:has(#books:target) .nav_list a[href="#books"] {
+    color: var(--accent);
+}
+
+body:has(#reviews:target) .nav_list a[href="#reviews"]::after,
+body:has(#quotes:target) .nav_list a[href="#quotes"]::after,
+body:has(#books:target) .nav_list a[href="#books"]::after {
+    transform: scaleX(1);
+}
+
+body:not(:has(#reviews:target)):not(:has(#quotes:target)):not(:has(#books:target)) .nav_list a[href="#about"] {
+    color: var(--accent);
+}
+body:not(:has(#reviews:target)):not(:has(#quotes:target)):not(:has(#books:target)) .nav_list a[href="#about"]::after {
+    transform: scaleX(1);
+}

@@ -1,0 +1,101 @@
+/* адаптив */
+
+@media (max-width: 980px) {
+    .about_inner {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    .about_media {
+        max-width: 8.75em;
+        margin-inline: auto;
+    }
+    .about_quill {
+        display: none;
+    }
+    .about_text p:last-child {
+        padding-right: 0;
+    }
+    .genres_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews_grid,
+    .quotes_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 14px;
+    }
+    .header_inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.75em 0;
+        gap: 0.75em;
+    }
+    /* логотип всегда на месте, не сжимается */
+    .logo {
+        flex-shrink: 0;
+    }
+    .nav_list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        font-size: 0.875em;
+    }
+    .about {
+        padding: 3em 0 4em;
+    }
+    .about_title {
+        font-size: 1.25em;
+    }
+    /* скрываем картинки стопки книг и пера в о себе */
+    .about_media {
+        display: none;
+    }
+    .about_quill {
+        display: none;
+    }
+    .about_inner {
+        grid-template-columns: 1fr; /* текст занимает всю ширину */
+    }
+    .about_text p:last-child {
+        padding-right: 0;
+    }
+    .genres {
+        padding: 3em 0;
+    }
+    .genres_title {
+        font-size: 1.5em;
+    }
+    .genres_grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+    .reviews_grid,
+    .quotes_grid {
+        grid-template-columns: 1fr;
+    }
+    .books_item {
+        grid-template-columns: 1fr;
+        gap: 0.25em;
+    }
+    .books_status {
+        justify-self: start;
+    }
+    .footer_inner {
+        flex-direction: column;
+        gap: 0.75em;
+        text-align: center;
+    }
+    .modal-content {
+        padding: 1.5em;
+    }
+    .modal-content h2 {
+        font-size: 1.375em;
+    }
+    .modal-decor {
+        display: none;
+    }
+}

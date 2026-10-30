@@ -1,0 +1,33 @@
+/* подвал */
+.footer {
+    background: var(--topbar-bg);
+    color: #fff;
+    padding: 2em 0;
+    margin-top: 0;
+}
+
+/* начинка подвала */
+.footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* текст подвала */
+.footer_text {
+    margin: 0;
+}
+
+/* ссылка в подвале */
+.footer_link {
+    color: #fff;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+/* эффекты при наведении в подвале */
+.footer_link:hover {
+    opacity: 0.7;
+}

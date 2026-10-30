@@ -1,0 +1,237 @@
+
+.task_2-container {
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* картинка квадрата */
+.image-wrapper {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #2196f3 0%, #ffffff 50%, #4caf50 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+/* статичное изображение */
+.mask-static {
+    position: absolute;
+    max-width: 45%;
+    max-height: 80%;
+    object-fit: contain;
+    display: block;
+}
+
+.mask-dance-left {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: mask-dance-right-left 1s ease-in-out infinite alternate;
+}
+
+@keyframes mask-dance-right-left {
+    0% {transform: translateY(-50%) rotate(-10deg); }
+    100% {transform: translateY(-50%) rotate(10deg);}
+    
+}
+.rocket-dance-right {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rocket-dance-up-down 1s ease-in-out infinite alternate;
+}
+
+@keyframes rocket-dance-up-down {
+    0% {transform: translateY(-50%) translateY(-10px); }
+    100% {transform: translateY(-50%) translateY(10px);}
+}
+
+/* при наведении */
+.task-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.task-static {
+    opacity: 1;
+}
+
+.task-hover {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.image-wrapper:hover .task-static
+{
+    opacity: 0;
+}
+
+.image-wrapper:hover .task-hover
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mask-hover {
+    position: absolute;
+    object-fit: contain;
+    display: block;
+}
+
+.mask-center {
+    width: 60%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+
+    transform:translate(-50%, -50%);
+}
+
+.rocket-fly {
+    width: 25%;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    animation: rocket-spiral 5s ease-in-out infinite;
+}
+
+@keyframes rocket-spiral {
+    0% {
+        transform: translate(-50%, -50%)
+                   rotate(-135deg)
+                   translateX(140%)
+                   rotate(135deg)
+                   scale(1.2);
+        opacity: 1;
+    }
+    25% {
+        transform: translate(-50%, -50%)
+                   rotate(-45deg)
+                   translateX(110%)
+                   rotate(45deg)
+                   scale(1.1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%)
+                   rotate(45deg)
+                   translateX(80%)
+                   rotate(-45deg)
+                   scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(-50%, -50%)
+                   rotate(135deg)
+                   translateX(50%)
+                   rotate(-135deg)
+                   scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%)
+                   rotate(225deg)
+                   translateX(0%)
+                   rotate(-225deg)
+                   scale(0.8);
+        opacity: 0;
+    }
+}
+
+.mask-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+
+    margin: 0;
+    text-align: center;
+   
+    font-size: 14px;
+    color:black;
+}
+
+/* при нажатии */
+.task-click-input {
+    display: none;
+}
+
+.task-active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.task-click-input:checked ~ .image-wrapper .task-static {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.task-click-input:checked ~ .image-wrapper .task-hover {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.task-click-input:checked ~ .image-wrapper .task-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.task-click-input:checked ~ .image-wrapper {
+    animation: task-active-shake 0.35s ease-in-out 5s infinite alternate;
+}
+
+@keyframes task-active-shake {
+    0%   { transform: translateX(-2px); }
+    100% { transform: translateX(2px);  }
+}
+
+
+.image-wrapper {
+    cursor: pointer;
+}
+
+.finger-active {
+    position: absolute;
+    object-fit: contain;
+    display: block;
+}
+
+.finger-center {
+    width: 55%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.finger-shake {
+    width: 20%;
+    left: 20%;  
+    top: 49%;
+    transform-origin: bottom center; 
+    z-index: 2;
+    animation: finger-left-right 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes finger-left-right {
+    0%   { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg);  }
+}
+
+.active-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    margin: 0;
+    padding-left: 4px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left center;
+    font-size: 14px;
+    color: #000000;
+}

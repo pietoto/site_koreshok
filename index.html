@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Корешок - дневник современного читателя</title>
+            
+            <link rel="stylesheet" href="css/variables.css">
+            <link rel="stylesheet" href="css/logo.css">
+            <link rel="stylesheet" href="css/header.css">
+            <link rel="stylesheet" href="css/hero.css">
+            <link rel="stylesheet" href="css/components.css">
+            <link rel="stylesheet" href="css/modals.css">
+            <link rel="stylesheet" href="css/footer.css">
+            <link rel="stylesheet" href="css/responsive.css">
+    </head> 
+
+<body>
+    <!-- верхняя полоска (тёмная) -->
+    <div class="topbar">
+        <div class="container topbar_inner">
+            <span class="topbar_text">Корешок</span>
+            <span class="topbar_meta">Дневник современного читателя</span>
+        </div>
+    </div>
+
+    <!-- шапка с меню -->
+    <header class="header">
+        <div class="container header_inner">
+            <a href="index.html" class="logo" aria-label="Корешок — на главную">
+                <span class="logo_book">
+                    <!-- отрисовка логотипа -->
+                    <span class="logo_page logo_page--left"></span>
+                    <span class="logo_page logo_page--right"></span>
+                    <span class="logo_bookmark"></span>
+                </span>
+                <span class="logo_text">Корешок</span>
+            </a>
+
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav_list">
+                    <li><a href="#about" class="nav_link">Главная</a></li>
+                    <li><a href="#reviews" class="nav_link">Рецензии</a></li>
+                    <li><a href="#quotes" class="nav_link">Цитаты</a></li>
+                    <li><a href="#books" class="nav_link">Список книг</a></li>
+                    <li><a href="#about" class="nav_link">Обо мне</a></li>
+                    <li><a href="tasks/tasks.html" class="nav_link">Задания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <!-- блок о блоге -->
+    <section class="about" id="about">
+      <div class="container about_inner">
+        <div class="about_media">
+          <img src="image/main_page/books-no-bg.png" alt="Стопка книг" class="about_books">
+        </div>
+        <div class="about_text">
+          <p class="about_tag">О блоге</p>
+          <h1 class="about_title">Читательский дневник, который ведётся вслух</h1>
+
+          <p>«Корешок» является разработкой юного программиста, который помимо цифр и кода страстно увлекается литературой. На сайте нет никакой профессиональной критики - только живые оценки и отзывы на прочитанные произведения. Целью данного детища является небольшой отдых от нулей и единиц.</p>
+          <p>ОСТОРОЖНО: на сайте присутствует много мыслей на полях и личного мнения! (не рекомендуется к прочтению ценителей сухих отзывов, сгенерированных нейросетями).</p>
+          <p>Я пишу исключительно про книги, которые читаю сама, а не про те, которые следовало бы прочитать всем. По моему сугубо личному мнению, не существует уникальной литературы: кому-то нравятся глубокие тёмные детективы, а кто-то до дыр изучил любимую книгу рецептов. И кто из них не прав?</p>
+          <p>Автор блога не одну собаку съел на детективах и романах, поэтому им будет посвящено большинство рецензий. Надеюсь, что мои рецензии позволят кому-то раскрыть любимое произведение по-новому или побудят прочитать давно откладываемую книгу. Главный критик сайта также не чурается фантастики и научной литературы, поэтому рецензии на них также зачешутся где-то между строк.</p>
+          <p>Кто такой любимый писатель? – это человек, который пишет так, что аж до мурашек пробирает. Ввиду такого определения сразу извинюсь, что в некоторых рецензиях буду особенно предвзята. Я тоже человек и имею своих фаворитов, которых невозможно оценивать по существующим критериям. Их истории бьют напрямую в душу, не давая возможности остаться равнодушным. Возвращение к их историям – это не повторение ранее изученного материала, а подчёркивание чего-то нового, чего-то ранее не заметного глазу. Особое удовольствие приносит возвращение к таким историям спустя годы, когда набираешься жизненного опыта и способен воспринимать больше так называемых «отсылок».</p>
+          <p>Данный блог ведёт нынешний программист, а в прошлом - редактор небольшого детского журнала и победитель конкурса журналистики. «Корешок» вырос из идеи хранить где-то свои мысли о прочитанных произведениях, которых с каждым месяцем становится только больше и больше. </p>
+          <p>Надеюсь, что разработанный сайт закроет сразу два гештальта: станет рабочим пространством для дисциплины «Вёрстка и прототипирование сайтов» и хранилищем рецензий на различные произведения.</p>
+        </div>
+      </div>
+      <img src="image/main_page/stylus-no-bg.png" alt="" class="about_quill" aria-hidden="true">
+    </section>
+
+    <!-- блок любимые жанры -->
+    <section class="genres" id="genres">
+        <div class="container">
+            <p class="genres_tag">Что я читаю</p>
+            <h2 class="genres_title">Любимые жанры</h2>
+            <div class="genres_grid">
+
+                <!-- детективы -->
+                <a href="#modal-detective" class="genre_card">
+                    <img src="image/genres/detective.png" alt="Детективы" class="genre_img">
+                    <h3 class="genre_name">Детективы</h3>
+                    <p class="genre_desc">Глубокие тёмные истории, где каждый персонаж - загадка. Мой главный жанр.</p>
+                    <span class="genre_more">подробнее...</span>
+                </a>
+
+                <!-- фантастика -->
+                <a href="#modal-fantasy" class="genre_card">
+                    <img src="image/genres/fantasy.png" alt="Фантастика" class="genre_img">
+                    <h3 class="genre_name">Фантастика</h3>
+                    <p class="genre_desc">Миры, где возможно всё. От научной фантастики до фэнтези.</p>
+                    <span class="genre_more">подробнее...</span>
+                </a>
+
+                <!-- романы -->
+                <a href="#modal-novel" class="genre_card">
+                    <img src="image/genres/novel.png" alt="Романы" class="genre_img">
+                    <h3 class="genre_name">Романы</h3>
+                    <p class="genre_desc">Истории, которые бьют в душу. Про любовь, потери и рост.</p>
+                    <span class="genre_more">подробнее...</span>
+                </a>
+
+                <!-- научная литература -->
+                <a href="#modal-science" class="genre_card">
+                    <img src="image/genres/science.png" alt="Научная литература" class="genre_img">
+                    <h3 class="genre_name">Научная литература</h3>
+                    <p class="genre_desc">Книги, которые расширяют кругозор и меняют взгляд на мир.</p>
+                    <span class="genre_more">подробнее...</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- блок рецензии -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <p class="reviews_tag">Мои мысли</p>
+            <h2 class="reviews_title">Рецензии</h2>
+            <div class="reviews_grid">
+
+                <!-- книга Преступление и наказание -->
+                <article class="review_card">
+                    <div class="review_cover">
+                        <img src="image/reviews/crime-and-punishment.jpg" alt="Преступление и наказание" class="review_img">
+                    </div>
+                    <div class="review_body">
+                        <h3 class="review_name">Преступление и наказание</h3>
+                        <p class="review_author">Ф. М. Достоевский</p>
+                        <p class="review_text">История о том, как теория, рожденная в воспаленном мозгу, разбивается о реальную жизнь и человеческую природу.</p>
+                        <a href="#modal-review-1" class="review_link">Читать полностью →</a>
+                    </div>
+                </article>
+
+                <!-- книга Скорбь сатаны -->
+                <article class="review_card">
+                    <div class="review_cover">
+                        <img src="image/reviews/sorrow-of-satan.jpg" alt="Скорбь сатаны" class="review_img">
+                    </div>
+                    <div class="review_body">
+                        <h3 class="review_name">Скорбь сатаны</h3>
+                        <p class="review_author">Мария Корелли</p>
+                        <p class="review_text">Ироничная и пугающая история о том, что бывает, когда дьявол исполняет все твои желания, но с очень интересной формулировкой.</p>
+                        <a href="#modal-review-2" class="review_link">Читать полностью →</a>
+                    </div>
+                </article>
+
+                <!-- книга Мастер и Маргарита -->
+                <article class="review_card">
+                    <div class="review_cover">
+                        <img src="image/reviews/master-and-margarita.jpg" alt="Мастер и Маргарита" class="review_img">
+                    </div>
+                    <div class="review_body">
+                        <h3 class="review_name">Мастер и Маргарита</h3>
+                        <p class="review_author">М. А. Булгаков</p>
+                        <p class="review_text">Роман, который невозможно пересказать. Мистика, сатира, любовь и вечный спор о добре и зле на страницах одной книги.</p>
+                        <a href="#modal-review-3" class="review_link">Читать полностью →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- блок цитаты -->
+    <section class="quotes" id="quotes">
+        <div class="container">
+            <p class="quotes_tag">Мысли на полях</p>
+            <h2 class="quotes_title">Цитаты</h2>
+            <div class="quotes_grid">
+
+                <blockquote class="quote_card">
+                    <p class="quote_text">«Зло всегда содержит ростки саморазрушения.»</p>
+                    <footer class="quote_author">— Нил Гейман, Терри Пратчетт, «Благие знамения»</footer>
+                </blockquote>
+
+                <blockquote class="quote_card">
+                    <p class="quote_text">«Всякий человек сам себя воспитать должен.»</p>
+                    <footer class="quote_author">— Иван Тургенев, «Отцы и дети»</footer>
+                </blockquote>
+
+                <blockquote class="quote_card">
+                    <p class="quote_text">«Да, человек смертен, но это было бы ещё полбеды. Плохо то, что он иногда внезапно смертен, вот в чём фокус!»</p>
+                    <footer class="quote_author">— Михаил Булгаков, «Мастер и Маргарита»</footer>
+                </blockquote>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- блок список книг -->
+    <section class="books" id="books">
+        <div class="container">
+            <p class="books_tag">Что прочитано</p>
+            <h2 class="books_title">Список книг</h2>
+            <ul class="books_list">
+                <li class="books_item">
+                    <span class="books_name">Мастер и Маргарита</span>
+                    <span class="books_author">Михаил Булгаков</span>
+                    <span class="books_status books_status--read">Прочитано</span>
+                </li>
+                <li class="books_item">
+                    <span class="books_name">Война и мир. Тома 1-4</span>
+                    <span class="books_author">Лев Толстой</span>
+                    <span class="books_status books_status--read">Прочитано</span>
+                </li>
+                <li class="books_item">
+                    <span class="books_name">Скорбь сатаны</span>
+                    <span class="books_author">Мария Корелли</span>
+                    <span class="books_status books_status--reading">Читаю сейчас</span>
+                </li>
+                <li class="books_item">
+                    <span class="books_name">1984</span>
+                    <span class="books_author">Джордж Оруэлл</span>
+                    <span class="books_status books_status--plan">В планах</span>
+                </li>
+                <li class="books_item">
+                    <span class="books_name">На острие скальпеля</span>
+                    <span class="books_author">Одри Блейк</span>
+                    <span class="books_status books_status--plan">В планах</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container footer_inner">
+            <p class="footer_text">© 2026 «Корешок». Дневник современного читателя.</p>
+            <a href="https://github.com/pietoto" class="footer_link" target="_blank" rel="noopener">автор на GitHub</a>
+        </div>
+    </footer>
+
+    <!-- модальные окна -->
+
+    <!-- модальное окно для детективов -->
+    <div id="modal-detective" class="modal">
+        <div class="modal-content">
+            <a href="#genres" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Детективы</h2>
+            <div class="modal-body">
+                <p>Детективы - это мой главный жанр. Я люблю их за то, что каждый персонаж здесь - загадка, а сюжет держит в напряжении до последней страницы. В хорошем детективе важно не только «кто убил», но и «почему» - мотивы, психология, тёмные уголки человеческой души.</p>
+                <p>Мои фавориты в этом жанре - классические английские детективы (Агата Кристи, Артур Конан Дойл) и современные скандинавские триллеры. Люблю, когда автор играет с читателем, подбрасывает ложные следы и заставляет сомневаться в каждом герое.</p>
+                <p>Если вы тоже любите детективы - загляните в раздел «Рецензии», там есть несколько моих отзывов на книги этого жанра.</p>
+            </div>
+            <img src="image/genres/detective.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+    <!-- модальное окно для фантастики -->
+    <div id="modal-fantasy" class="modal">
+        <div class="modal-content">
+            <a href="#genres" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Фантастика</h2>
+            <div class="modal-body">
+                <p>Фантастика - это жанр, где возможно всё. Я люблю его за свободу: здесь можно построить целые миры, придумать новые законы физики, заселить планеты необычными существами. Но настоящая фантастика - не про технологии, а про людей. Про то, как мы поведём себя в новых условиях.</p>
+                <p>Я читаю и научную фантастику (космос, будущее, ИИ), и фэнтези (магия, драконы, средневековые миры). Ценю книги, где за фантастическим сюжетом скрывается глубокий философский смысл.</p>
+                <p>Из любимого - «Дюна» Фрэнка Герберта, «451° по Фаренгейту» Рэя Брэдбери и современные авторы вроде Нила Стивенсона.</p>
+            </div>
+            <img src="image/genres/fantasy.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+    <!-- модальное окно для романов -->
+    <div id="modal-novel" class="modal">
+        <div class="modal-content">
+            <a href="#genres" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Романы</h2>
+            <div class="modal-body">
+                <p>Романы - это истории, которые бьют в душу. Про любовь, потери, взросление и поиск себя. Хороший роман - это когда закрываешь книгу и ещё несколько дней ходишь под впечатлением, прокручивая в голове судьбы героев.</p>
+                <p>Я люблю и классические романы (Достоевский, Толстой, Джейн Остин), и современные (Салли Руни, Донна Тартт). Ценю книги, где герои живые - с ошибками, сомнениями и противоречиями.</p>
+                <p>Романы - это отдых от детективов и фантастики, возможность погрузиться в человеческие отношения и переживания.</p>
+            </div>
+            <img src="image/genres/novel.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+    <!-- модальное окно для научной литературы -->
+    <div id="modal-science" class="modal">
+        <div class="modal-content">
+            <a href="#genres" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Научная литература</h2>
+            <div class="modal-body">
+                <p>Научная литература - это книги, которые расширяют кругозор и меняют взгляд на мир. Я читаю научпоп про физику, биологию, нейронауки и историю - всё, что помогает лучше понять, как устроен мир и мы сами.</p>
+                <p>Из любимого - «Краткая история времени» Стивена Хокинга, «Сапиенс» Юваля Ноя Харари, книги Ричарда Докинза и Карла Сагана. Ценю авторов, которые умеют объяснять сложное простым языком, не теряя глубины.</p>
+                <p>Научная литература - это не скучно. Это как путешествие в неизвестное, которое всегда рядом.</p>
+            </div>
+            <img src="image/genres/science.png" alt="" class="modal-decor">
+        </div>
+    </div>
+
+
+
+    <!-- модальное окно для рецензии на преступление и наказание -->
+    <div id="modal-review-1" class="modal">
+        <div class="modal-content">
+            <a href="#reviews" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Преступление и наказание</h2>
+            <div class="modal-body">
+                <p>Этот роман я читала долго, вдумчиво и с перерывами. Достоевский не пишет легко, но он пишет так, что после закрытия книги ты еще долго сидишь и смотришь в одну точку.</p>
+                <p>Раскольников - это персонаж, которого одновременно жаль и от которого хочется отстраниться. Его теория о «право имеющих» рушится в ту же секунду, когда он переступает черту. И весь роман - это путь к осознанию того, что человек не может жить без боли и сострадания.</p>
+                <p>Для меня эта книга - не просто классика, а рентген человеческой души. Очень советую читать ее в зрелом возрасте, когда теория уже не кажется такой привлекательной, а понятие «наказание» звучит не как приговор, а как облегчение.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- модальное окно для рецензии на скорбь сатаны -->
+    <div id="modal-review-2" class="modal">
+        <div class="modal-content">
+            <a href="#reviews" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Скорбь сатаны</h2>
+            <div class="modal-body">
+                <p>Эта книга - отличный пример того, как можно написать историю о дьяволе без ужасов и крови. Люцифер здесь не страшное чудовище, а скорее циничный наблюдатель, которому скучно в аду и хочется посмотреть, как живут люди.</p>
+                <p>Он дарит главному герою все: деньги, славу, власть, красоту. Но у всего есть цена. И наблюдать за тем, как герой расплачивается за исполненные желания - это смесь сатиры и трагедии.</p>
+                <p>Меня больше всего зацепила ирония автора. Это не просто мистика, это очень тонкий психологический этюд о человеческой жадности, тщеславии и том, что в жизни не бывает бесплатного сыра.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- модальное окно для рецензии на мастера и Маргариту -->
+    <div id="modal-review-3" class="modal">
+        <div class="modal-content">
+            <a href="#reviews" class="modal-close" aria-label="Закрыть"></a>
+            <h2>Мастер и Маргарита</h2>
+            <div class="modal-body">
+                <p>Мое возвращение к этому роману было трепетным. Впервые я читала его в школе и поняла примерно 30%. Второй раз - в универе, и тогда открылось гораздо больше. А сейчас я перечитываю его и понимаю, что «Мастер и Маргарита» - это не просто книга, это целый мир, в который можно заходить как в свой собственный.</p>
+                <p>Воланд со свитой, Иешуа и Пилат, московские главы и вечный бал - здесь нет ничего лишнего. Булгаков смог уместить в одном романе и сатиру на современное ему общество, и трагедию одиночества, и бесконечную любовь.</p>
+                <p>Для меня эта книга - о трусости и внутренней свободе. «Трусость - самый страшный порок» - эта фраза с годами становится только точнее. Если вы еще не читали - начните. Если читали - перечитайте. Каждый раз вы будете находить что-то новое.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* логотип */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625em; 
+    color: var(--fg);
+    font-family: var(--font-serif);
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: opacity .2s ease;
+}
+
+.logo:hover {
+    opacity: .8;
+    text-decoration: none;
+}
+
+/* контейнер для всей книги */
+.logo_book {
+    position: relative;
+    width: 2.5em; 
+    height: 2.125em;
+    flex: 0 0 2.5em;
+}
+
+/* страницы книги (левая и правая) */
+.logo_page {
+    position: absolute;
+    bottom: 0;
+    width: 1.1875em;
+    height: 1.625em;
+    background: currentColor;
+}
+
+.logo_page--left {
+    left: 0;
+    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 100%);
+    border-radius: 0.1875em 0 0 0.1875em;
+}
+
+.logo_page--right {
+    right: 0;
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+    border-radius: 0 0.1875em 0.1875em 0;
+}
+
+/* корешок */
+.logo_book::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0.125em;
+    height: 1.625em;
+    background: var(--accent);
+}
+
+/* закладка */
+.logo_bookmark {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.4375em;
+    height: 0.875em; 
+    background: var(--accent);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+
+/* текст рядом с лого */
+.logo_text {
+    line-height: 1;
+}
+

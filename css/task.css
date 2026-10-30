@@ -1,0 +1,95 @@
+/* страница Задания */
+.tasks {
+    padding: 72px 0 96px;
+}
+
+.tasks_tag {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 8px;
+}
+
+.tasks_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    color: var(--fg);
+}
+
+.tasks_lead {
+    max-width: 60ch;
+    color: var(--muted);
+    margin: 0 0 48px;
+}
+
+/* список ссылок */
+.tasks_list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-sans);
+    font-size: 17px;
+}
+
+.tasks_list a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    color: var(--fg);
+    transition: color .2s ease;
+}
+
+.tasks_list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.tasks_list a:hover {
+    color: var(--accent);
+}
+.tasks_list a:hover::after {
+    transform: scaleX(1);
+}
+
+/* адаптив страницы */
+@media (max-width: 720px) {
+    .tasks {
+        padding: 48px 0 64px;
+    }
+    .tasks_title {
+        font-size: 28px;
+    }
+    .tasks_list {
+        font-size: 16px;
+        gap: 12px;
+    }
+}
+
+/* страница отдельно взятого задания */
+.task {
+    padding: 64px 0 96px;
+}
+
+.task_demo {
+    display: flex;
+    justify-content: center;    /* центрируем по горизонтали */
+    align-items: center;        /* центрируем по вертикали */
+    padding: 48px 0;
+}

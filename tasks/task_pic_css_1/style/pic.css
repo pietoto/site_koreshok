@@ -1,0 +1,181 @@
+/* задний фон + рамка */
+.picture {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to top, #ffffff 0%, #8CA8EE 50%, #3F74DB 100%);
+    border: 6px solid transparent;
+    border-image: linear-gradient(to top right, #CE207B 0%, #F17DB2 50%, #ffffff 100%);
+    border-image-slice: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* трава (4 холмика) */
+.grass {
+    position: absolute;
+    bottom: -5px;
+    left: 0px;           
+    width: 68px;         
+    height: 50px;       
+    background: repeating-linear-gradient(
+        135deg,
+        #10753a,
+        #10753a 5px,
+        #55e792 5px,
+        #55e792 10px
+    );
+
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 5;
+}
+
+/* отрисовка травы */
+.grass-1 { left: -18px; }
+.grass-2 { left: 38px; }
+.grass-3 { left: 94px; }
+.grass-4 { left: 150px; }
+
+/* облака (2 овала) */
+.cloud {
+    position: absolute;
+    border-radius: 50%;
+    top: -10px;
+    background: radial-gradient(
+        ellipse at center,
+        #65A4F7 0%,
+        #98B4EB 50%,
+        #FFFFFF 100%
+    );
+}
+/* отрисовка облаков*/
+.cloud-1 {
+    width: 70px;
+    height: 45px;
+    /* top: 10px; */
+    left: 10px;
+}
+
+.cloud-2 {
+    width: 100px;
+    height: 60px;
+    /* top: 10px; */
+    left: 40px;
+}
+
+/* стрекаоза (общий контейнер) */
+.dragonfly {}
+
+/* тело стрекозы */
+.dragonfly .body
+{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background: #DDE831;
+    border: 1px solid #88901e;
+    transform: rotate(135deg);
+    border-radius: 50%;
+    top: 45px;
+    left: 140px;
+}
+
+/* голова стрекозы */
+.dragonfly .head {
+    position:absolute;
+    width: 12px;
+    height: 12px;
+    background: #DDE831;
+    border: 1px solid #88901e;
+    border-radius: 50%;
+    top: 63px;
+    left: 140px;
+}
+
+/* глаз стрекозы */
+.dragonfly .eye {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #000000;
+    border-radius: 50px;
+}
+
+/* два глаза стрекозы*/
+.dragonfly .eye-left { top: 1px; left: 2px; }
+.dragonfly .eye-right { top: 3px; left: 7px; }
+
+/* крыло стрекозы */
+.dragonfly .wing {
+    position: absolute;
+    width: 22px;
+    height: 10px;
+    background: #c96df7;
+    border: 1px solid #8a42ac;
+    border-radius: 50%;
+}
+
+/* 4 крыла стрекозы */
+.dragonfly .wing-top-left {top: 40px; left: 130px; transform: rotate(30deg); }
+.dragonfly .wing-top-right {top: 35px; left: 140px; transform: rotate(60deg); }
+.dragonfly .wing-bottom-left {top: 60px; left: 160px; transform: rotate(60deg); }
+.dragonfly .wing-bottom-right {top: 55px; left: 170px; transform: rotate(30deg); }
+
+/* гриб (общий контейнер) */
+.mushroom {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+/* большой гриб */
+.mushroom-big {
+    left: -10px;
+    bottom: 5px;
+    z-index: 2;
+}
+
+/* маленький гриб */
+.mushroom-small {
+    left: 55px;
+    bottom: 20px;
+    z-index: 3;
+    transform: rotate(30deg);
+    
+}
+
+/* ножка гриба */
+.mushroom .stem {
+    width: 22px;
+    height: 50px;
+    background: #E3D8BC;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #9b621c;
+    order: 2;
+}
+
+/* шляпка гриба */
+.mushroom .cap {
+    width: 80px;
+    height: 45px;
+    background: radial-gradient(circle at 30% 30%, #a07050, #5c2e16);
+    border-radius: 50% 50% 10% 10% / 100% 100% 10% 10%;
+    order: 1;
+    z-index: 1;
+    margin-bottom: -10px;
+}
+
+/* уменьшаем маленький гриб */
+.mushroom-small .stem {
+    width: 16px;
+    height: 35px;
+}
+
+.mushroom-small .cap {
+    width: 55px;
+    height: 32px;
+    left: -20px;
+    bottom: 3px;
+}

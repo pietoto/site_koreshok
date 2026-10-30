@@ -1,0 +1,325 @@
+/* блок жанры */
+.genres {
+    padding: 5em 0;
+    background: #f0efec;
+}
+
+/* заголовок ЧТО Я ЧИТАЮ */
+.genres_tag {
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5em;
+}
+/* заголовок Любимые жанры */
+.genres_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.2;
+    margin: 0 0 2.5em;
+    color: var(--fg);
+}
+
+/* сетка из 4 карточек одинаковой ширины */
+.genres_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+/* карточка жанра */
+.genre_card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 0.5em;
+    padding: 1.5em 1.25em;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* эффект при наведении */
+.genre_card:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.08);
+}
+
+/* изображение карточки*/
+.genre_img {
+    width: 4em;
+    height: 4em;
+    margin: 0 auto 1em;
+    object-fit: contain;
+}
+
+/* заголовок карточки*/
+.genre_name {
+    font-family: var(--font-serif);
+    font-size: 1.125em;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: var(--fg);
+}
+
+/* описание карточки */
+.genre_desc {
+    font-size: 0.875em;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* подробнее */
+.genre_more {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 0.75em;
+    transition: opacity 0.2s;
+}
+
+.genre_card:hover .genre_more {
+    opacity: 0.7;
+}
+
+/* блок рецензии */
+.reviews {
+    padding: 5em 0;
+    background: #fafaf8;
+}
+
+.reviews_tag {
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5em;
+}
+
+.reviews_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.2;
+    margin: 0 0 2.5em;
+    color: var(--fg);
+}
+
+/* 3 колонки */
+.reviews_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+}
+
+
+.review_card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review_card:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.08);
+}
+
+.review_cover {
+    height: 16em; 
+    background: #f0efec; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.review_img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; 
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.15); 
+}
+
+.review_body {
+    padding: 1.25em;
+}
+
+.review_name {
+    font-family: var(--font-serif);
+    font-size: 1.125em;
+    font-weight: 400;
+    margin: 0 0 0.25em;
+    color: var(--fg);
+}
+
+.review_author {
+    font-size: 0.875em;
+    color: var(--muted);
+    margin: 0 0 0.75em;
+}
+
+.review_text {
+    font-size: 0.875em;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 0 1em;
+}
+
+.review_link {
+    font-size: 0.875em;
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.review_link:hover {
+    opacity: 0.7;
+}
+
+/* блок цитаты */
+.quotes {
+    padding: 5em 0;
+    background: #f0efec;
+}
+
+.quotes_tag {
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5em;
+}
+
+.quotes_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.2;
+    margin: 0 0 2.5em;
+    color: var(--fg);
+}
+
+.quotes_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+}
+
+.quote_card {
+    background: #fff;
+    border-left: 3px solid var(--accent);
+    border-radius: 0.5em;
+    padding: 1.5em;
+    margin: 0;
+}
+
+.quote_text {
+    font-family: var(--font-serif);
+    font-size: 1.0625em;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--fg);
+    margin: 0 0 1em;
+}
+
+.quote_author {
+    font-size: 0.8125em;
+    color: var(--muted);
+}
+
+/* блок список книг */
+.books {
+    padding: 5em 0;
+    background: #fafaf8;
+}
+
+.books_tag {
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5em;
+}
+
+.books_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.2;
+    margin: 0 0 2.5em;
+    color: var(--fg);
+}
+
+.books_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+}
+
+.books_item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+}
+
+.books_name {
+    font-family: var(--font-serif);
+    font-size: 1.0625em;
+    color: var(--fg);
+}
+
+.books_author {
+    font-size: 0.875em;
+    color: var(--muted);
+}
+
+.books_status {
+    font-size: 0.8125em;
+    font-weight: 600;
+    padding: 0.25em 0.75em;
+    border-radius: 1em;
+    text-align: center;
+    justify-self: end;
+}
+
+.books_status--read {
+    background: #e6f0e6;
+    color: #2e7d32;
+}
+
+.books_status--reading {
+    background: #fff4e0;
+    color: #b26a00;
+}
+
+.books_status--plan {
+    background: #e8e8e6;
+    color: var(--muted);
+}
+
+#about,
+#reviews,
+#quotes,
+#books,
+#genres {
+    scroll-margin-top: 5em; /* учёт высоты только информативной части шапки (для корректного сохранения шапки)*/
+}

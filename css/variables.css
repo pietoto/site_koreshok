@@ -1,0 +1,61 @@
+/* базовые настройки стилей */
+
+/* переменные */
+:root {
+    /* цвет тёмной полоски */
+    --topbar-bg: #3a3f47; 
+    /* цвет шапки */
+    --header-bg: #e8e8e6;
+    /* цвет страницы */
+    --bg: #fafaf8;
+    /* цвет текста */
+    --fg: #2a2a2a;
+    /* цвет второстепенного текста */
+    --muted: #6b6b72;
+    /* акцентный цвет для ссылок, закладок, корешка */
+    --accent: #7a2e2e;
+    /* цвет тонких линий и границ */
+    --line: rgba(42, 42, 42, .12);
+    /* максимальная ширина контейнера */
+    --max-w: 70em;
+    /* шрифты */
+    --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-serif: Georgia, 'Times New Roman', 'PT Serif', serif;
+}
+
+html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 1em;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* изменение стилей ссылок */
+a {
+    color: inherit;
+    /* убираем стандартные подчёркивания */
+    text-decoration: none;
+}
+
+.container {
+    width: min(var(--max-w), 92%);
+    margin-inline: auto;
+}

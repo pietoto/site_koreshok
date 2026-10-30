@@ -1,0 +1,77 @@
+/* блок о блоге */
+.about {
+    position: relative;
+    padding: 5em 0;
+    overflow: hidden;
+}
+
+/* сетка для картинки книги + текст */
+.about_inner {
+    display: grid;
+    grid-template-columns: 9.375em 1fr;
+    gap: 2.5em;
+    align-items: start;
+}
+
+.about_media {
+    position: relative;
+    min-height: 8.125em;
+}
+
+
+.about_books {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0.625em 0.9375em rgba(0, 0, 0, .18));
+}
+
+.about_text {
+    position: relative;
+    z-index: 1;
+}
+
+/* подзаголовок О БЛОГЕ */
+.about_tag {
+    font-family: var(--font-sans);
+    font-size: 0.8125em;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.5em;
+}
+
+/* главный заголовок */
+.about_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.375em;
+    line-height: 1.3;
+    margin: 0 0 1.25em;
+    color: var(--fg);
+}
+
+/* абзацы текста */
+.about_text p {
+    margin: 0 0 1.125em;
+    color: #333;
+    max-width: 70ch;
+}
+
+/* последний абзац */
+.about_text p:last-child {
+    padding-right: 5em;
+}
+
+/* картинка пера */
+.about_quill {
+    position: absolute;
+    right: 3%;
+    bottom: 1.25em;
+    width: 10em;
+    height: auto;
+    opacity: .95;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
